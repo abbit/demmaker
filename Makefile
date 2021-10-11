@@ -13,3 +13,7 @@ sh:
 .PHONY: freeze
 freeze:
 	poetry export -f requirements.txt --output requirements.txt
+
+.PHONY: dump-telegram
+dump-telegram:
+	python extractors/telegram.py $(json) $(phrases)
